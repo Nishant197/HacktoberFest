@@ -21,30 +21,30 @@ import config from "./config.js";
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const PORT = config.PORT;
 
-var resumee = express();
-resumee.use(express.json());
-resumee.use(express.urlencoded());
-resumee.use(cors());
-resumee.use(bodyParser.json(), urlencodedParser);
-resumee.use(fileupload());
-resumee.use(express.static("files"));
+var resumedp = express();
+resumedp.use(express.json());
+resumedp.use(express.urlencoded());
+resumedp.use(cors());
+resumedp.use(bodyParser.json(), urlencodedParser);
+resumedp.use(fileupload());
+resumedp.use(express.static("files"));
 // Routes
 
-resumee.use("/auth", Auth);
-resumee.use("/dashboard", Dashboard);
-resumee.use("/project", Project);
-resumee.use("/education", Education);
-resumee.use("/achievement", Achievement);
-resumee.use("/experience", Experience);
-resumee.use("/certificate", Certificate);
-resumee.use("/introduction", Introduction);
-resumee.use("/skill", Skill);
+resumedp.use("/auth", Auth);
+resumedp.use("/dashboard", Dashboard);
+resumedp.use("/project", Project);
+resumedp.use("/education", Education);
+resumedp.use("/achievement", Achievement);
+resumedp.use("/experience", Experience);
+resumedp.use("/certificate", Certificate);
+resumedp.use("/introduction", Introduction);
+resumedp.use("/skill", Skill);
 
-resumee.get("/", (req, res) => {
-  res.send("Welcome to Resumee");
+resumedp.get("/", (req, res) => {
+  res.send("Welcome to resumedp");
 });
 
-resumee.listen(PORT, () => {
+resumedp.listen(PORT, () => {
   ConnectDB()
     .then(() => console.log(`Server is Running  at Port ✌`))
     .catch(() =>
