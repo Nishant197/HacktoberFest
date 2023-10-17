@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import config from "./config.js";
 
+// Database Connection
 const connectDB = async () => {
   try {
     //database Name
