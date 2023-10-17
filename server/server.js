@@ -44,6 +44,7 @@ resumedp.get("/", (req, res) => {
   res.send("Welcome to resumedp");
 });
 
+// Server Running Configuration
 resumedp.listen(PORT, () => {
   ConnectDB()
     .then(() => console.log(`Server is Running  at Port ✌`))
