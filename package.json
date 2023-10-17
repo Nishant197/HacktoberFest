@@ -1,0 +1,24 @@
+{
+  "name": "resumedp",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R0HITKUMAR/resumeDP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R0HITKUMAR/resumeDP/issues"
+  },
+  "homepage": "https://github.com/R0HITKUMAR/resumeDP#readme"
+}
